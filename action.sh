@@ -1,5 +1,9 @@
 #!/bin/bash
-# expecting these 4 arguments... needs more work here!
+if [ $# -lt 5 ]
+then
+  echo "Missing one or more of the required arguments: PROJECT, REGION, ZONE, KEY"
+  exit 1
+fi
 PROJECT=$1
 REGION=$2
 ZONE=$3
